@@ -24,3 +24,9 @@ Template.user.events
     e.preventDefault()
     Router.go 'users'
     false
+
+Template.user.helpers
+  user: -> Meteor.user
+
+UI.registerHelper 'name', ->
+  Meteor.user().profile.name
