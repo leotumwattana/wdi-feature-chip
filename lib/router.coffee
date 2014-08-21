@@ -9,7 +9,8 @@ Router.map ->
 
   @route 'users'
 
-  @route 'user_detail'
+  @route 'user/:_id',
+    template: 'user_detail'
 
   @route 'profile'
 
