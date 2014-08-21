@@ -9,10 +9,10 @@ Router.map ->
 
   @route 'users'
 
-  @route 'user'
+  @route 'user_detail'
 
 autoLogin = (pause) ->
-  Router.go 'user' if Meteor.userId()
+  Router.go 'user_detail' if Meteor.userId()
 
 requireLogin = (pause) ->
   Router.go '/' unless Meteor.userId()

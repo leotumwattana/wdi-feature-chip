@@ -4,7 +4,7 @@ slideOpen = (target) ->
 slideClose = (target) ->
   $(target).transit { x: "0" }
 
-Template.user.rendered = ->
+Template.user_detail.rendered = ->
   $('.chip').swipe
     swipeLeft: (e) ->
       e.preventDefault()
@@ -19,14 +19,14 @@ Template.user.rendered = ->
       slideClose(e.currentTarget)
       false
 
-Template.user.events
+Template.user_detail.events
   'click .back-button': (e, t) ->
     e.preventDefault()
     Router.go 'users'
     false
 
-Template.user.helpers
-  user: -> Meteor.user
+Template.user_detail.helpers
+  user: -> Meteor.user()
 
 UI.registerHelper 'name', ->
-  Meteor.user().profile.name
+  Meteor.user().profile.name if Meteor.user()
