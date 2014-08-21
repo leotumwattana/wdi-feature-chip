@@ -11,6 +11,8 @@ Router.map ->
 
   @route 'user_detail'
 
+  @route 'profile'
+
 autoLogin = (pause) ->
   Router.go 'user_detail' if Meteor.userId()
 

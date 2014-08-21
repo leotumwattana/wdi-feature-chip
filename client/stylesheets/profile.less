@@ -1,0 +1,36 @@
+@import url('imports/colors.import.less');
+
+#profile_view {
+  height: 100%;
+
+  form {
+    padding-top: 20px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  input {
+    color: white !important;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    border-top: 1px solid darken(@teal, 10%);
+    border-bottom: 1px solid darken(@teal, 10%);
+  }
+
+  ::-webkit-input-placeholder {
+     color: darken(@teal, 10%);
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+     color: darken(@teal, 10%);
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: darken(@teal, 10%);
+  }
+
+  :-ms-input-placeholder {
+     color: darken(@teal, 10%);
+  }
+}

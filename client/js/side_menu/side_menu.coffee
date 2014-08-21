@@ -6,5 +6,5 @@ Template.side_menu.events
 
   'click #profile-button': (e, t) ->
     e.preventDefault()
-    alert 'lala'
+    Router.go 'profile'
     false
