@@ -1,0 +1,44 @@
+@import "/packages/font-awesome-4-less/font-awesome.import.less";
+@import url('imports/colors.import.less');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: @teal;
+}
+
+nav {
+  text-align: center;
+  background: darken(@teal, 10%);
+  color: white;
+  height: 45px;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 10px;
+  position: fixed;
+
+  h1 {
+    color: white;
+    font-size: 1.6em;
+    margin: 0;
+    margin-top: -8px;
+  }
+}
+
+main, .nav-padded {
+  padding-top: 45px;
+}
+
+.settings-button {
+  #fa-icon(gear);
+  font-size: 1.4em;
+}
+
+.back-button {
+  #fa-icon(chevron-left);
+  font-size: 1.4em;
+}
+
+

@@ -1,0 +1,50 @@
+@import url('imports/colors.import.less');
+
+@item_height: 60px;
+@border_color: darken(@teal, 5%);
+@instructor_image_radius: 100px;
+
+#user-view {
+  height: 100%;
+
+  .chips {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .chip {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    padding-top: 50px;
+
+    button {
+      position: absolute;
+      width: 35%;
+      right: -35%;
+      top: 0;
+      bottom: 0;
+      margin: 0;
+      background: #d0483b;
+    }
+  }
+
+  .chip:first-of-type {
+    background: @green;
+  }
+
+  .chip:last-of-type {
+    background: @red;
+  }
+
+  img {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: @instructor_image_radius;
+    height: @instructor_image_radius;
+    border-radius: 100px;
+    border: 4px solid white;
+  }
+}

@@ -1,0 +1,47 @@
+@import url('imports/colors.import.less');
+
+@item_height: 60px;
+@border_color: darken(@teal, 5%);
+@instructor_image_radius: 100px;
+
+#users-view {
+  .user {
+    border-top: 1px solid @border_color;
+    background: lighten(@teal, 15%);
+    position: relative;
+    height: @item_height;
+
+    &:last-of-type {
+      border-bottom: 1px solid @border_color;
+    }
+
+    .name {
+      position: absolute;
+      left: 15px;
+      top: 18px;
+      font-size: 1.2em;
+      color: lighten(@teal, 50%);
+    }
+
+    .chip {
+      position: absolute;
+      width: @item_height * 0.9;
+      height: @item_height * 0.9;
+      top: (@item_height - (@item_height * 0.9)) / 2;
+      border-radius: 1000px;
+      border: 2px solid white;
+
+      &:first-of-type {
+        right: 15px;
+      }
+
+      &:last-of-type {
+        right: @item_height + 20px;
+      }
+
+      &.used {
+        opacity: 0.3;
+      }
+    }
+  }
+}
