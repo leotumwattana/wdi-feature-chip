@@ -5,6 +5,15 @@
 @instructor_image_radius: 100px;
 
 #users-view {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: @teal;
+  box-shadow: 0 0 5px 5px fade(black, 20%);
+
   .user {
     border-top: 1px solid @border_color;
     background: lighten(@teal, 15%);
