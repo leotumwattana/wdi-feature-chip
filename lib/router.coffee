@@ -10,3 +10,9 @@ Router.map ->
   @route 'users'
 
   @route 'user'
+
+autoLogin = (pause) ->
+  Router.go 'user' if Meteor.userId()
+
+Router.onBeforeAction autoLogin,
+  only: ['login', 'register']
