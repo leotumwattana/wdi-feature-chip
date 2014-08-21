@@ -20,5 +20,5 @@ Template.users.events
 
   'click .user': (e, t) ->
     e.preventDefault()
-    Router.go '/user'
+    Router.go 'user_detail'
     false
