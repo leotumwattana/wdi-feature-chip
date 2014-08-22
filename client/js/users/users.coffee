@@ -24,5 +24,7 @@ Template.users.events
 
   'click .user': (e, t) ->
     e.preventDefault()
-    Router.go '/user/' + Meteor.userId()
+    userId = $(e.currentTarget).data('user-id')
+    console.log userId
+    Router.go '/user/' + userId
     false
