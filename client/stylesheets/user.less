@@ -35,6 +35,11 @@
       background: #d0483b;
     }
 
+    &.used .use-button {
+      background: darken(#d0483b, 20%);
+      color: darken(#d0483b, 10%);
+    }
+
     .poker-chip {
 
       .vertical-align();
@@ -80,19 +85,21 @@
     &.used .poker-chip {
       opacity: 0.5;
     }
+
+
   }
 
 
 
 
 
-  img {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: @instructor_image_radius;
-    height: @instructor_image_radius;
-    border-radius: 100px;
-    border: 4px solid white;
-  }
+  // img {
+  //   position: absolute;
+  //   bottom: 10px;
+  //   left: 10px;
+  //   width: @instructor_image_radius;
+  //   height: @instructor_image_radius;
+  //   border-radius: 100px;
+  //   border: 4px solid white;
+  // }
 }
