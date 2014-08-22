@@ -12,6 +12,11 @@ Template.profile.events
     updateUsername(e.currentTarget.value)
     false
 
+  'click .logout-button': (e, t) ->
+    e.preventDefault()
+    Meteor.logout()
+    false
+
 Template.profile.helpers
   username: ->
     user = Meteor.user()
