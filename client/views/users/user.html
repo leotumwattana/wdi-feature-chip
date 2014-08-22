@@ -3,8 +3,9 @@
     <div class="row">
       <div class="small-8 columns name">{{name this}}</div>
       <div class="small-4 columns chips">
-        <img src="images/harry.jpg" class="chip">
-        <img src="images/leo.jpg" class="chip used">
+        {{#each chips this}}
+          <img src="images/{{chip_image this}}" class="chip {{chip_used this}}">
+        {{/each}}
       </div>
     </div>
   </div>
