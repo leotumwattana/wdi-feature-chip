@@ -13,7 +13,8 @@ toggleSlide = ->
     slideOpen()
 
 Template.users.helpers
-  users: -> Meteor.users.find()
+  users: ->
+    Meteor.users.find {}, { sort: { 'profile.name': 1 } }
 
 Template.users.events
   'click .settings-button': (e, t) ->
