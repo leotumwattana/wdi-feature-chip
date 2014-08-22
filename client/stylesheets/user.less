@@ -20,7 +20,7 @@
     position: relative;
     padding-top: 50px;
 
-    button {
+    .use-button {
       position: absolute;
       width: 35%;
       right: -35%;
@@ -29,6 +29,11 @@
       margin: 0;
       background: #d0483b;
     }
+
+    &.used {
+      opacity: 0.5;
+    }
+
   }
 
   .chip:first-of-type {

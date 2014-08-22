@@ -10,14 +10,9 @@
   </nav>
   <div id="user-view" class="user nav-padded">
     <div class="chips">
-      <div class="chip">
-        <img src="/images/harry.jpg" alt="">
-        <button>USE</button>
-      </div>
-      <div class="chip">
-        <img src="/images/leo.jpg" alt="">
-        <button>USE</button>
-      </div>
+      {{#each chips}}
+        {{> chip }}
+      {{/each}}
     </div>
   </div>
 </template>
