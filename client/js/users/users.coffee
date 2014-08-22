@@ -12,6 +12,9 @@ toggleSlide = ->
   else
     slideOpen()
 
+Template.users.helpers
+  users: -> Meteor.users.find()
+
 Template.users.events
   'click .settings-button': (e, t) ->
     e.preventDefault()

@@ -11,70 +11,9 @@
       </div>
     </nav>
     <div class="users">
-      <div class="user">
-        <div class="row">
-          <div class="small-8 columns name">Chase</div>
-          <div class="small-4 columns chips">
-            <img src="images/harry.jpg" class="chip">
-            <img src="images/leo.jpg" class="chip used">
-          </div>
-        </div>
-      </div>
-      <div class="user">
-        <div class="row">
-          <div class="small-8 columns name">JP</div>
-          <div class="small-4 columns chips">
-            <img src="images/harry.jpg" class="chip">
-            <img src="images/leo.jpg" class="chip">
-          </div>
-        </div>
-      </div>
-      <div class="user">
-        <div class="row">
-          <div class="small-8 columns name">Morne</div>
-          <div class="small-4 columns chips">
-            <img src="images/harry.jpg" class="chip">
-            <img src="images/leo.jpg" class="chip">
-          </div>
-        </div>
-      </div>
-      <div class="user">
-        <div class="row">
-          <div class="small-8 columns name">Nathan</div>
-          <div class="small-4 columns chips">
-            <img src="images/harry.jpg" class="chip">
-            <img src="images/leo.jpg" class="chip">
-          </div>
-        </div>
-      </div>
-      <div class="user">
-        <div class="row">
-          <div class="small-8 columns name">Nick</div>
-          <div class="small-4 columns chips">
-            <img src="images/harry.jpg" class="chip">
-            <img src="images/leo.jpg" class="chip">
-          </div>
-        </div>
-      </div>
-      <div class="user">
-        <div class="row">
-          <div class="small-8 columns name">Pierre</div>
-          <div class="small-4 columns chips">
-            <img src="images/harry.jpg" class="chip">
-            <img src="images/leo.jpg" class="chip">
-          </div>
-        </div>
-      </div>
-      <div class="user">
-        <div class="row">
-          <div class="small-8 columns name">Sophia</div>
-          <div class="small-4 columns chips">
-            <img src="images/harry.jpg" class="chip">
-            <img src="images/leo.jpg" class="chip">
-          </div>
-        </div>
-      </div>
-
+      {{#each users }}
+        {{> user }}
+      {{/each }}
     </div>
   </main>
 </template>
