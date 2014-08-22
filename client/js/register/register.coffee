@@ -26,6 +26,9 @@ createUser = (email, password) ->
     else
       Router.go 'profile'
 
+Template.register.helpers
+  email: -> Session.get 'email'
+
 Template.register.events
   'submit form': (e, t) ->
     e.preventDefault()

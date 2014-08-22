@@ -9,14 +9,16 @@ loginUser = (email, password) ->
 Template.login.events
   'submit form': (e, t) ->
     e.preventDefault()
-
     email = t.find('#accounts-email').value
     password = t.find('#accounts-password').value
     loginUser(email, password)
-
     false
 
   'click .register': (e, t) ->
     e.preventDefault()
+    Session.set 'email', t.find('#accounts-email').value
     Router.go 'register'
     false
+
+Template.login.helpers
+  email: -> Session.get 'email'
