@@ -9,13 +9,14 @@ Router.map ->
 
   @route 'users'
 
-  @route 'user/:_id',
+  @route 'user',
+    path: 'user/:_id'
     template: 'user_detail'
 
   @route 'profile'
 
 autoLogin = (pause) ->
-  Router.go 'user_detail' if Meteor.userId()
+  Router.go "/user/#{Meteor.userId()}" if Meteor.userId()
 
 requireLogin = (pause) ->
   Router.go '/' unless Meteor.userId()
