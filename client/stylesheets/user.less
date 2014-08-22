@@ -1,7 +1,7 @@
 @import url('imports/colors.import.less');
 
 @item_height: 60px;
-@border_color: darken(@teal, 5%);
+@border_color: darken(@teal, 10%);
 @instructor_image_radius: 100px;
 
 #user-view {
@@ -18,7 +18,6 @@
     width: 100%;
     height: 50%;
     position: relative;
-    padding-top: 50px;
 
     .use-button {
       position: absolute;
@@ -30,19 +29,50 @@
       background: #d0483b;
     }
 
-    &.used {
-      opacity: 0.5;
+    &.used:after {
+      color: darken(@teal, 10%);
+      text-shadow: 0 -1px darken(@teal, 15%);
     }
 
+    &:after {
+      display: block;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 4em;
+      font-weight: bold;
+    }
+
+    &:last-of-type {
+
+      border-top: 2px dashed @border_color;
+
+      &:after {
+        content: 'L';
+      }
+
+      &:not(.used):after {
+        color: @yellow;
+        text-shadow: 0 -1px darken(@yellow, 20%);
+      }
+    }
+
+    &:first-of-type {
+      &:after {
+        content: 'H';
+      }
+
+      &:not(.used):after {
+        color: @purple;
+        text-shadow: 0 -1px darken(@purple, 20%);
+      }
+    }
   }
 
-  .chip:first-of-type {
-    background: @green;
-  }
 
-  .chip:last-of-type {
-    background: @red;
-  }
+
+
 
   img {
     position: absolute;
