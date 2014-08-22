@@ -3,6 +3,9 @@
 @item_height: 60px;
 @border_color: darken(@teal, 5%);
 @instructor_image_radius: 100px;
+@chip_radius: @item_height * 0.5;
+@chip_right_inset: 15px;
+@chip_spacing: 10px;
 
 #users-view {
   position: absolute;
@@ -34,18 +37,20 @@
 
     .chip {
       position: absolute;
-      width: @item_height * 0.9;
-      height: @item_height * 0.9;
-      top: (@item_height - (@item_height * 0.9)) / 2;
+      width: @chip_radius;
+      height: @chip_radius;
+      top: (@item_height - (@chip_radius)) / 2;
       border-radius: 1000px;
-      border: 2px solid white;
+      border: 2px dashed white;
 
       &:first-of-type {
-        right: 15px;
+        right: @chip_radius + @chip_spacing + @chip_right_inset;
+        background: @purple;
       }
 
       &:last-of-type {
-        right: @item_height + 20px;
+        right: @chip_right_inset;
+        background: @yellow;
       }
 
       &.used {

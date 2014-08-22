@@ -1,8 +1,10 @@
 @import url('imports/colors.import.less');
+@import url('imports/mixins.import.less');
 
 @item_height: 60px;
 @border_color: darken(@teal, 10%);
 @instructor_image_radius: 100px;
+@poker_chip_radius: 200px;
 
 #user-view {
   height: 100%;
@@ -19,6 +21,10 @@
     height: 50%;
     position: relative;
 
+    &:last-of-type {
+      border-top: 2px dashed @border_color;
+    }
+
     .use-button {
       position: absolute;
       width: 35%;
@@ -29,44 +35,50 @@
       background: #d0483b;
     }
 
-    &.used:after {
-      color: darken(@teal, 10%);
-      text-shadow: 0 -1px darken(@teal, 15%);
-    }
+    .poker-chip {
 
-    &:after {
-      display: block;
-      text-align: center;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 4em;
-      font-weight: bold;
-    }
+      .vertical-align();
+      margin: 0 auto;
 
-    &:last-of-type {
-
-      border-top: 2px dashed @border_color;
+      width: @poker_chip_radius;
+      height: @poker_chip_radius;
+      border-radius: 1000px;
+      border: 6px dashed white;
 
       &:after {
-        content: 'L';
-      }
-
-      &:not(.used):after {
-        color: @yellow;
-        text-shadow: 0 -1px darken(@yellow, 20%);
+        display: block;
+        width: 100%;
+        position: relative;
+        top: 50%;
+        .vertical-align();
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
       }
     }
 
-    &:first-of-type {
-      &:after {
-        content: 'H';
-      }
+    &:first-of-type .poker-chip {
+      background: @purple;
 
-      &:not(.used):after {
-        color: @purple;
-        text-shadow: 0 -1px darken(@purple, 20%);
+      &:after {
+        content: 'HARRY';
+        color: darken(@purple, 20%);
+        text-shadow: 0 -1px darken(@purple, 30%);
       }
+    }
+
+    &:last-of-type .poker-chip {
+      background: @yellow;
+
+      &:after {
+        content: 'LEO';
+        color: darken(@yellow, 20%);
+        text-shadow: 0 -1px darken(@yellow, 30%);
+      }
+    }
+
+    &.used .poker-chip {
+      opacity: 0.5;
     }
   }
 
