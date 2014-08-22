@@ -4,7 +4,7 @@ updateUsername = (name) ->
 Template.profile.events
   'click .back-button': (e, t) ->
     e.preventDefault()
-    Router.go 'users'
+    Router.go '/user/' + Meteor.userId()
     false
 
   'keyup #profile-name': (e, t) ->

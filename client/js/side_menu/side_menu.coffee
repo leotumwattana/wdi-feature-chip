@@ -3,8 +3,3 @@ Template.side_menu.events
     e.preventDefault()
     Meteor.logout()
     false
-
-  'click #profile-button': (e, t) ->
-    e.preventDefault()
-    Router.go 'profile'
-    false
