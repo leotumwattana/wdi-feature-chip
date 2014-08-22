@@ -31,11 +31,10 @@ Template.chip.rendered = ->
 Template.chip.events
   'click .use-button': (e, t) ->
     e.preventDefault()
-
     userId = $(e.currentTarget).data('user-id')
     dev = $(e.currentTarget).data('dev')
     useChip(userId, dev)
-
+    slideClose(e.currentTarget.parentNode)
     false
 
 Template.chip.helpers
