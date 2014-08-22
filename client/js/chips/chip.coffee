@@ -1,8 +1,8 @@
 slideOpen = (target) ->
-  $(target).transit { x: "-35%" }
+  $(target).transit { x: "-35%", duration: 200, easing: 'out' }
 
 slideClose = (target) ->
-  $(target).transit { x: "0" }
+  $(target).transit { x: "0", duration: 200, easing: 'out' }
 
 toggle = (target) ->
   if $(target).css('x') == '-35%'
