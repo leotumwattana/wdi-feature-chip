@@ -1,13 +1,17 @@
 @import url('imports/colors.import.less');
 
 .accounts {
+  padding-top: 20px;
   height: 100%;
   background: @teal;
   text-align: center;
 
   h1 {
-    margin: 0;
-    color: @red;
+    margin-bottom: 20px;
+    color: lighten(@teal, 30%);
+    text-shadow: 0 -1px darken(@teal, 10%);
+    font-weight: bold;
+    font-size: 4em;
   }
 
   form {
