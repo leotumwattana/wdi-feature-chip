@@ -24,7 +24,7 @@ createUser = (email, password) ->
     if error
       console.log "Error creating user"
     else
-      Router.go 'user'
+      Router.go 'profile'
 
 Template.register.events
   'submit form': (e, t) ->
