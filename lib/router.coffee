@@ -7,11 +7,15 @@ Router.map ->
 
   @route 'register'
 
-  @route 'users'
+  @route 'users',
+    waitOn: ->
+      Meteor.subscribe 'users'
 
   @route 'user',
     path: 'user/:_id'
     template: 'user_detail'
+    waitOn: ->
+      Meteor.subscribe 'users'
 
   @route 'profile'
 

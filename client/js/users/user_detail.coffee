@@ -10,5 +10,8 @@ Template.user_detail.events
     false
 
 Template.user_detail.helpers
-  user: -> Meteor.user()
-  chips: -> Meteor.user().profile.chips if Meteor.user()
+  user: ->
+    Meteor.users.findOne(Router.current().params._id)
+  chips: ->
+    user = Meteor.users.findOne(Router.current().params._id)
+    user.profile.chips if user
