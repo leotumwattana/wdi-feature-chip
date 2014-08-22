@@ -1,7 +1,14 @@
 <template name="user">
   <div class="user" data-user-id="{{_id}}">
     <div class="row">
-      <div class="small-8 columns name">{{name this}}</div>
+      <div class="small-8 columns">
+        <div class="name">
+          {{name this}}
+        </div>
+        <div class="email">
+          {{email this}}
+        </div>
+      </div>
       <div class="small-4 columns chips">
         {{#each chips this}}
           <div class="chip {{chip_used this}}"></div>
