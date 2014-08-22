@@ -5,7 +5,6 @@ loginUser = (email, password) ->
     else
       console.log "Logged in as:"
       console.log Meteor.user()
-      Router.go 'user'
 
 Template.login.events
   'submit form': (e, t) ->
