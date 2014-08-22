@@ -10,6 +10,16 @@ createUser = (email, password) ->
     password: password
     profile:
       name: email
+      chips: [
+        {
+          used: false
+          img: 'harry.jpg'
+        },
+        {
+          used: false
+          img: 'leo.jpg'
+        }
+      ]
   }, (error) ->
     if error
       console.log "Error creating user"
