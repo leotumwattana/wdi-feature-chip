@@ -1,5 +1,6 @@
 Router.configure
   layoutTemplate: 'basic_layout'
+  loadingTemplate: 'loading'
 
 Router.map ->
   @route 'login',
@@ -33,3 +34,5 @@ Router.onBeforeAction autoLogin,
 
 Router.onBeforeAction requireLogin,
   except: ['login', 'register']
+
+Router.onBeforeAction('loading')

@@ -2,7 +2,7 @@ updateUsername = (name) ->
   Meteor.users.update Meteor.userId(), { $set: { 'profile.name': name } }
 
 Template.profile.events
-  'click .back-button': (e, t) ->
+  'click .done-button': (e, t) ->
     e.preventDefault()
     Router.go '/user/' + Meteor.userId()
     false

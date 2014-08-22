@@ -1,5 +1,5 @@
 Template.user_detail.events
-  'click .back-button': (e, t) ->
+  'click .list-button': (e, t) ->
     e.preventDefault()
     Router.go 'users'
     false

@@ -1,3 +1,2 @@
 Template.user.helpers
-  chips: (user) ->
-    user.profile.chips
+  chips: (user) -> user.profile.chips

@@ -22,8 +22,7 @@ Template.users.events
     toggleSlide()
     false
 
-  'click .user': (e, t) ->
+  'click .done-button': (e, t) ->
     e.preventDefault()
-    userId = $(e.currentTarget).data('user-id')
-    Router.go '/user/' + userId
+    Router.go '/user/' + Meteor.userId()
     false
