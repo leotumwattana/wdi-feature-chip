@@ -10,6 +10,9 @@ toggle = (target) ->
   else
     slideOpen(target)
 
+useChip = (userId, dev) ->
+  Meteor.call('use_chip', userId, dev)
+
 Template.chip.rendered = ->
   $('.chip').swipe
     swipeLeft: (e) ->
@@ -28,7 +31,12 @@ Template.chip.rendered = ->
 Template.chip.events
   'click .use-button': (e, t) ->
     e.preventDefault()
-    buttons = $('.use-button')
-    button = $(e.currentTarget)
+
+    userId = $(e.currentTarget).data('user-id')
+    dev = $(e.currentTarget).data('dev')
+    useChip(userId, dev)
+
     false
 
+Template.chip.helpers
+  userId: -> Router.current().params._id

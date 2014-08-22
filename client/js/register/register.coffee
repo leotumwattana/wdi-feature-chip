@@ -13,11 +13,11 @@ createUser = (email, password) ->
       chips: [
         {
           used: false
-          img: 'harry.jpg'
+          dev: 'harry'
         },
         {
           used: false
-          img: 'leo.jpg'
+          dev: 'leo'
         }
       ]
   }, (error) ->

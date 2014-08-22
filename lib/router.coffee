@@ -14,6 +14,9 @@ Router.map ->
   @route 'user',
     path: 'user/:_id'
     template: 'user_detail'
+    onBeforeAction: ->
+      unless this.params._id == Meteor.userId()
+        Router.go 'users'
     waitOn: ->
       Meteor.subscribe 'users'
 
